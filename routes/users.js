@@ -8,6 +8,11 @@ const users = [
     lastName: "Kostadima",
     age: "28",
   },
+  {
+    firstName: "Dimos",
+    lastName: "Christidis",
+    age: "44",
+  }
 ];
 
 //all routes starting with /users
