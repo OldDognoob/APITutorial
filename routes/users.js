@@ -21,5 +21,13 @@ router.get("/users", (req, res) => {
 });
 
 router.post('/', (req,res) => {
+    const user = req.body;
+
+    user.push({...user, id: uuidv4()});
     
+    res.send(`User with the name ${user.firstName}added to the database!`);
 });
+
+router.get('/:id')
+
+export default router;
