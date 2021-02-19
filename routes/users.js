@@ -19,3 +19,7 @@ const users = [
 router.get("/users", (req, res) => {
   res.send("Hello");
 });
+
+router.post('/', (req,res) => {
+    
+});
