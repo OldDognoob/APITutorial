@@ -1,23 +1,13 @@
 import express from "express";
+import {v4 as uuidv4} from 'uuid';
 
 const router = express.Router();
 
-const users = [
-  {
-    firstName: "Maria",
-    lastName: "Kostadima",
-    age: "28",
-  },
-  {
-    firstName: "Dimos",
-    lastName: "Christidis",
-    age: "44",
-  }
-];
+let users = [];
 
 //all routes starting with /users
-router.get("/users", (req, res) => {
-  res.send("Hello");
+router.get("/", (req, res) => {
+  res.send("users");
 });
 
 router.post('/', (req,res) => {
