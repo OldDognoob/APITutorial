@@ -7,7 +7,7 @@ import {createUser,getUsers,getUser,deleteUser,patchUser} from '../controllers/u
 
 const router = express.Router();
 
-let users = [];
+
 
 //all routes starting with /users
 router.get("/", getUsers);
