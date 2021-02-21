@@ -8,17 +8,17 @@ export const createUser = (req,res) => {
     res.send(`User with the name ${user.firstName}added to the database!`);
   };
 
-export const getUser = (req, res) => {
+export const getUsers = (req, res) => {
     res.send("users");
   }
 
-export const getUserId = (req, res) => {
+export const getUser = (req, res) => {
     const {id} = req.params;
     const foundUser = users.find((user) => user.id === id);
     res.send(foundUser);
 }
 
-export const deleteUserId = (req,res)=>{
+export const deleteUser = (req,res)=>{
     //get the id from request params
     const{id}= req.params;
     //we want to remove the element from the array we use the filter method
@@ -36,7 +36,7 @@ export const deleteUserId = (req,res)=>{
     res.send(`User with the id ${id} deleted from the database.`);
   }
 
-  export const patchUserId = (req,res)=>{
+  export const patchUser = (req,res)=>{
     const {id} = req.params;
     const{firstName, lastName, age} = req.body;
   
